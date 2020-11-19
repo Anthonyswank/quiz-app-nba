@@ -1,0 +1,124 @@
+/* Your styles should be mobile-first and responsive */
+
+/** 
+  * If you are unclear on how to utilize a mobile-first, responsive technique to write your CSS, here is an example: 
+  *
+  * https://github.com/andreacardybailey/responsive_example/blob/master/styles/responsive-base.css 
+  *
+*/
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap');
+
+body {
+  background: rgb(237,128,0);
+  background: linear-gradient(90deg, rgba(237,128,0,1) 0%, rgba(0,0,0,1) 100%);
+  /* Makes a gradient for my background */
+}
+
+h1, h2, p, span, label {
+  color: white;
+  /* Change all text in app to white */
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  font-size: 60px;
+  margin: 80px 0 150px 0;
+  /* Specialization for my quiz title */
+}
+
+.start {
+  text-align: center;
+  font-family: 'Architects Daughter', cursive;
+  padding: 10px;
+  /* start page styling */
+}
+
+.start button, form button {
+  margin: 20px;
+  padding: 10px;
+  font-weight: bold;
+  /* submit button styling for question pages, and start page. */
+}
+
+.questionDiv, .feedback, .end {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  border-width: 5px;
+  border-color: white;
+  border-style: solid;
+  padding: 20px;
+  font-family: 'Architects Daughter', cursive;
+  /* changes my question, feedback, and end page to flexbox, white border around my html
+  added padding and margin to html */
+}
+
+.feedback, .end {
+  align-items: center;
+  font-weight: bold;
+  /* aligns html to center, bold text on feedback and end page */
+}
+
+.feedback h2, .end h2 {
+  font-size: 35px;
+  /* sets headers for feedback and end page to bigger font size */
+}
+
+.feedback p, .end p {
+  font-size: 20px;
+  /* sets text for feedback and end page to smaller font size */
+}
+
+.end .bigger {
+  font-size: 40px;
+  /* end page score text bigger than other text */
+}
+
+.end button {
+  margin-right: 0;
+  margin-left: 70px;
+  /* couldnt figure out why end page restart quiz button wouldnt center in my html, 
+  so this was my bandaid fix */
+}
+
+.questionDiv h2 {
+  margin-bottom: 40px;
+  font-size: 30px;
+  font-family: 'Architects Daughter', cursive;
+  /* added margin to bottom of header on question pages , and different font size */
+}
+
+input {
+  margin-right: 30px;
+  margin-bottom: 30px;
+  /* spacing between answers on question pages */
+}
+
+label {
+  font-size: 25px;
+  font-weight: bold;
+  /* labels for answers on question pages styling */
+}
+
+.status {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  /* made question number on the left and score on the right on question pages */
+}
+
+.currentQuestion, .score {
+  font-size: 20px;
+  font-weight: bold;
+  /* styling for score and question number */
+}
+
+@media all and (min-width:800px) {
+  /* styling for desktop to center form contents */
+  .questionDiv form {
+    align-self: center;
+  }
+}
+
+
